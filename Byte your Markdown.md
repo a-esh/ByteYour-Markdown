@@ -53,13 +53,13 @@ Para crear un encabezado en Markdown, se utiliza el carácter `#`, seguido de un
 
 `# Titile h6`
 
-* Semántica: En el lenguaje de marcado HTML, los encabezados van desde `<h1>`(el más importante) hasta `<h6>` (el menos importante). Es una buena práctica usar encabezados de manera jerárquica y no saltarse niveles, ya que los encabezados también tienen importancia desde el punto de vista de la accesibilidad y la semántica del contenido.
+* **Semántica:** En el lenguaje de marcado HTML, los encabezados van desde `<h1>`(el más importante) hasta `<h6>` (el menos importante). Es una buena práctica usar encabezados de manera jerárquica y no saltarse niveles, ya que los encabezados también tienen importancia desde el punto de vista de la accesibilidad y la semántica del contenido.
 
-* Estilización: La apariencia de los encabezados (tamaño de fuente, peso, márgenes, etc.) se determina típicamente con CSS cuando el Markdown se convierte a HTML. Sin embargo, en editores de Markdown y vistas previas, los estilos de los encabezados suelen estar predefinidos.
+* **Estilización:** La apariencia de los encabezados (tamaño de fuente, peso, márgenes, etc.) se determina típicamente con CSS cuando el Markdown se convierte a HTML. Sin embargo, en editores de Markdown y vistas previas, los estilos de los encabezados suelen estar predefinidos.
 
-* Enlace automático: Algunos procesadores de Markdown, como los usados en GitHub, generan automáticamente enlaces anclables (o "anchor links") para cada encabezado. Esto permite a los lectores enlazar directamente a una sección específica de un documento.
+* **Enlace automático:** Algunos procesadores de Markdown, como los usados en GitHub, generan automáticamente enlaces anclables (o "anchor links") para cada encabezado. Esto permite a los lectores enlazar directamente a una sección específica de un documento.
 
-* Espacio después del #: Es importante incluir un espacio entre el carácter # y el texto del encabezado para que se interprete correctamente como un encabezado.
+* **Espacio después del #:** Es importante incluir un espacio entre el carácter # y el texto del encabezado para que se interprete correctamente como un encabezado.
 
 ---
 
@@ -69,20 +69,36 @@ Markdown posee su propia sintaxis para estilos como cursiva (_texto_ o *texto*),
 
 
 This is an _italic_ text.
-
-`This is an _italic_ text.`
+```md
+This is an _italic_ text.
+```
 
 This is an **strong** text.
-
-`This is an **strong** text.`
+```md
+This is an **strong** text.`
+```
 
 This is an ~~strikethrough~~ text.
+```md
+This is an ~~strikethrough~~ text.
+```
 
-`This is an ~~strikethrough~~ text.`
+### No nativo / uso de HTML: 
 
 This is an <ins>underlined</ins> text.
+```html
+This is an <ins>underlined</ins>.
+```
 
-`This is an <ins>underlined</ins>.`
+This is an highlight <mark>highlighted</mark> text.
+```html
+This is an highlight <mark>highlighted</mark> text.
+```
+
+<font color="#41FAAF">This ia a text with color!</font>
+```html
+<font color="#41FAAF">This is a text with color!</font>
+```
 
 ---
 
@@ -294,12 +310,16 @@ Las reglas horizontales en Markdown sirven como una forma visual de separar secc
 ---
 
 # Links | Enlaces `<url>` `[](url)`
+Los enlaces son esenciales para conectar recursos y permitir a los lectores acceder a contenido adicional, ya sea dentro del mismo documento o en otros sitios web. En Markdown, la sintaxis para crear enlaces es sencilla y directa.
+
+Para crear un enlace en línea, se utiliza la siguiente estructura:
 
 My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@ByteYourCode "El mejor canal para ver tutoriales").
 
 ```md
 My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@ByteYourCode "El mejor canal para ver tutoriales").
 ```
+<br>
 
 <https://www.youtube.com/@ByteYourCode> `<https://www.youtube.com/@ByteYourCode>`
 
@@ -319,11 +339,15 @@ My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@Byt
 
 [![This is the ByteYourCode Logo](https://yt3.googleusercontent.com/7hyuY-x_fCjYWtgITHiuoOfereaDFDM7TrLem5AXqLOqniWsVx2ZGuuXTAwGMeZ9U5Xltsp4wPw=s176-c-k-c0x00ffffff-no-rj "ByteYourCode Logo")](https://www.youtube.com/@ByteYourCode)
 
+> Uso de imágenes locales: Además de las URLs, puedes usar rutas de archivos locales para imágenes si estás trabajando en un proyecto local o si tu archivo Markdown será visualizado en un contexto donde se pueda acceder a archivos locales.
+
 ```md
 [![This is the ByteYourCode Logo](https://www.youtube.com/@ByteYourCode/img "ByteYourCode Logo")](https://www.youtube.com/@ByteYourCode)
 ```
 
 ## Image size
+
+Markdown por sí mismo no tiene una sintaxis para redimensionar imágenes. Sin embargo, algunos procesadores de Markdown permiten usar HTML crudo, por lo que podrías usar etiquetas de imagen HTML para este propósito, aunque no es una solución puramente Markdown.
 
 <img src="https://yt3.googleusercontent.com/7hyuY-x_fCjYWtgITHiuoOfereaDFDM7TrLem5AXqLOqniWsVx2ZGuuXTAwGMeZ9U5Xltsp4wPw=s176-c-k-c0x00ffffff-no-rj" width="300" height="200"> <img src="https://yt3.googleusercontent.com/7hyuY-x_fCjYWtgITHiuoOfereaDFDM7TrLem5AXqLOqniWsVx2ZGuuXTAwGMeZ9U5Xltsp4wPw=s176-c-k-c0x00ffffff-no-rj" width="200" height="300">
 
@@ -332,7 +356,8 @@ My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@Byt
 ```
 ---
 
-# Video 
+# Video `<iframe>`
+En Markdown puro, no hay una sintaxis específica para insertar iframe. Sin embargo, muchos procesadores de Markdown permiten incrustar HTML directamente en el contenido, lo que significa que puedes insertar un iframe usando su etiqueta HTML estándar.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pBy1zgt0XPc?si=d4NdUd694V-K0EAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
@@ -343,6 +368,7 @@ My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@Byt
 ---
 
 # Table | Tabla
+En Markdown, las tablas permiten organizar y presentar datos de manera estructurada. La sintaxis de las tablas en Markdown es bastante directa.
 
 | Month    | Assignee | Backup |
 | -------- | -------- | ------ |
@@ -357,10 +383,40 @@ My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@Byt
 | February | Gregg    | Karen  |
 | March    | Diane    | Jorge  |
 ```
+
+<br>
+
+En Markdown, las tablas permiten organizar y presentar datos de manera estructurada. La sintaxis de las tablas en Markdown es bastante directa, aunque no todos los dialectos de Markdown la soportan (sin embargo, la versión de GitHub Flavored Markdown, por ejemplo, sí lo hace).
+
+**Ejemplo básico de una tabla en Markdown**:
+
+```markdown
+| Encabezado 1 | Encabezado 2 |
+|--------------|--------------|
+| fila 1, col 1 | fila 1, col 2 |
+| fila 2, col 1 | fila 2, col 2 |
+```
+
+**Detalles técnicos y características**:
+
+1. **Delimitadores**: Las columnas son separadas por el símbolo `|`.
+
+2. **Alineación**: Puedes controlar la alineación del contenido de las columnas utilizando dos puntos `:` en la fila delimitadora. Por ejemplo:
+   - `|:--------------|` alineará a la izquierda.
+   - `|--------------:|` alineará a la derecha.
+   - `|:-------------:|` centrará el contenido.
+
+3. **Flexibilidad con espaciado**: El número de guiones `-` y espacios en la fila delimitadora no necesita ser exacto y no afecta la anchura final de la columna. Su propósito principal es actuar como un delimitador visual entre encabezados y contenido.
+
+4. **Filas y columnas**: Puedes añadir tantas filas y columnas como necesites. Asegúrate de que cada fila tenga el mismo número de columnas, incluso si algunas celdas están vacías.
+
+5. **Estilización**: La apariencia final de la tabla, como los bordes y el espaciado, dependerá del CSS aplicado en la página donde se visualice el contenido.
 
 ---
 
-# Script
+# Subscript & Superscript
+
+En el Markdown estándar, no hay una sintaxis nativa para subíndices (subscript) o superíndices (superscript). Por eso se usa HTML.
 
 ## Subscript `<sub></sub>`
 
@@ -380,16 +436,8 @@ X<sup>2</sup>
 
 ---
 
-# Highlight `<mark></mark>`
-
-I need to highlight these <mark>very important words</mark>.
-```html
-I need to highlight these <mark>very important words</mark>.
-```
-
----
-
 # Heading IDs `<h3 id="id"></h3>`
+Los "Heading IDs" se refieren a los identificadores únicos asociados con los encabezados en un documento HTML. Estos IDs permiten vincular directamente a una sección específica dentro de un documento, haciendo más fácil la navegación, especialmente en documentos largos.
 
 <h3 id="custom-id">My Great Heading</h3>
 
@@ -419,16 +467,6 @@ http://tudominio.com/tupagina#custom-id
 
 ```html
 <center>This text is centered.</center>
-```
-
----
-
-# Color `<font></font>`
-
-<font color="#41FAAF">This ia a text with color!</font>
-
-```html
-<font color="#41FAAF">This is a text with color!</font>
 ```
 
 ---
