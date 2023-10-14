@@ -1,6 +1,52 @@
 # Byte your Markdown
+
 ---
-# Comments | Comentarios `<!--Text-->` `[Text]: #`
+
+## Indice 
+
+1. [Editores de Markdown](#editores-de-markdown)
+   * [Editores de Código](#editores-de-codigo)
+   * [Editores de Markdown Online](#editores-de-markdown-online)
+2. [Uso de Markdown](#uso-de-markdown)
+   * [Comments | Comentarios](#comments--comentarios-text-text)
+   * [Headings | Titulos](#headings--titulos-)
+   * [Text format | Formato del texto](#text-format--formato-del-texto)
+   * [Paragraphs | Párrafos](#paragraphs--párrafos)
+   * [Line Breaks | Saltos de línea](#line-breaks--saltos-de-línea-br)
+   * [Lists | Listas](#lists--listas)
+     * [Order lists | Listas ordenadas](#order-lists--listas-ordenadas-1)
+     * [Unordered Lists | Listas desordenadas](#unordered-lists--listas-desordenadas--)
+   * [Blockquote | Cita en bloque](#blockquote--cita-en-bloque-)
+   * [Code | Codigo](#code--codigo-)
+   * [Horizontal Rule | Reglas Horizontales](#horizontal-rule--reglas-horizontales)
+   * [Links | Enlaces](#links--enlaces-url-url)
+   * [Images | Imágenes](#images--imágenes-url)
+   * [Video](#video-iframe)
+   * [Table | Tabla](#table--tabla)
+   * [Subscript & Superscript](#subscript--superscript)
+   * [Heading IDs](#heading-ids-h3-ididh3)
+   * [Indent (Tab)](#indent-tab-nbsp)
+   * [Center](#center-centerncenter)
+   * [Symbols & Emojis](#symbols--emojis)
+3. [Crea tu README.md](#crea-tu-readmemd)
+
+---
+# Editores de Markdown
+Es el editor que usaremos para escribir nuestro archivo Markdown, puede ser **Editores de Codigo** o **Editores especificos de Markdown**, yo voy a recomendar que uses tu entorno de programación habitual, porque suelen tener soporte nativo o alguna extensión para la previsualización de archivos `.md`.
+### Editores de Codigo
+* #### [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
+> En este curso, adoptaremos Visual Studio Code (VSCode) como nuestra herramienta principal de desarrollo, ya que incluye una herramienta de visualización nativa.
+* #### [Sublime Text](https://www.sublimetext.com/)
+
+### Editores de Markdown Online
+* #### [StackEdit](https://stackedit.io/)
+* #### [Dillinger](https://dillinger.io/)
+
+---
+
+# Uso de Markdown
+
+## Comments | Comentarios `<!--Text-->` `[Text]: #`
 
 En realidad, Markdown no tiene una sintaxis nativa para comentarios como, por ejemplo, HTML `(<!-- comment -->)` o lenguajes de programación como Python `(# comment)` o JavaScript `(// comment)`.
 
@@ -18,40 +64,40 @@ Estos comentarios no se mostrarán en el documento renderizado, pero estarán pr
 
 ---
 
-# Headings | Titulos `#`
+## Headings | Titulos `#`
 En Markdown, los encabezados o "headings" se utilizan para indicar títulos y subtítulos en el documento. Markdown proporciona seis niveles de encabezados, que corresponden a los niveles de encabezados HTML `<h1>` a `<h6>`.
 
 Para crear un encabezado en Markdown, se utiliza el carácter `#`, seguido de un espacio. El número de caracteres `#` determina el nivel del encabezado.
 ```md
-# Titile h1
+# Title h1
 ```
 ```html
-<h1>Titile h1</h1>
+<h1>Title h1</h1>
 ```
 
-# Titile h1
+# Title h1
 
-`# Titile h1`
+`# Title h1`
 
-## Titile h2
+## Title h2
 
-`# Titile h2`
+`# Title h2`
 
-### Titile h3
+### Title h3
 
-`# Titile h3`
+`# Title h3`
 
-#### Titile h4
+#### Title h4
 
-`# Titile h4`
+`# Title h4`
 
-##### Titile h5
+##### Title h5
 
-`# Titile h5`
+`# Title h5`
 
-###### Titile h6
+###### Title h6
 
-`# Titile h6`
+`# Title h6`
 
 * **Semántica:** En el lenguaje de marcado HTML, los encabezados van desde `<h1>`(el más importante) hasta `<h6>` (el menos importante). Es una buena práctica usar encabezados de manera jerárquica y no saltarse niveles, ya que los encabezados también tienen importancia desde el punto de vista de la accesibilidad y la semántica del contenido.
 
@@ -63,7 +109,7 @@ Para crear un encabezado en Markdown, se utiliza el carácter `#`, seguido de un
 
 ---
 
-# Text format | Formato del texto
+## Text format | Formato del texto
 
 Markdown posee su propia sintaxis para estilos como cursiva (_texto_ o *texto*), negrita (**texto**) y tachado (~~texto~~). Sin embargo, para el subrayado, se recurre al uso de HTML: <ins>texto</ins>`<ins></ins>`. Esto se debe a que Markdown no tiene una sintaxis nativa para el subrayado.
 
@@ -95,14 +141,14 @@ This is an highlight <mark>highlighted</mark> text.
 This is an highlight <mark>highlighted</mark> text.
 ```
 
-<font color="#41FAAF">This ia a text with color!</font>
+<font color="#41FAAF">This isa text with color!</font>
 ```html
 <font color="#41FAAF">This is a text with color!</font>
 ```
 
 ---
 
-# Paragraphs | Párrafos
+## Paragraphs | Párrafos
 En Markdown, los párrafos son bloques de texto separados por una o más líneas en blanco. Es bastante sencillo y se asemeja a cómo escribimos texto en cualquier procesador de texto convencional.
 
 I really like using Markdown.
@@ -118,7 +164,7 @@ all of my documents from now on.
 ```
 ---
 
-# Line Breaks | Saltos de línea `<br>`
+## Line Breaks | Saltos de línea `<br>`
 En Markdown, aunque la sintaxis principal para un salto de línea es añadir un "Enter", también se puede utilizar la etiqueta HTML `<br>` para lograr un resultado similar. Dado que Markdown permite la inclusión de HTML crudo, esta etiqueta se renderizará correctamente en la mayoría de los procesadores de Markdown.
 
 I think I'll use it to format <br> all of my documents from now on.
@@ -129,9 +175,9 @@ I think I'll use it to format <br> all of my documents from now on.
 
 ---
 
-# Lists | Listas
+## Lists | Listas
 
-## Order lists | Listas ordenadas | `1.`
+### Order lists | Listas ordenadas | `1.`
 Las listas ordenadas, también conocidas como listas numeradas, son una serie de elementos en un orden específico. En Markdown, las listas ordenadas se crean utilizando números seguidos de un punto y un espacio.
 
 1. First item
@@ -188,7 +234,7 @@ Las listas ordenadas, también conocidas como listas numeradas, son una serie de
     - Otro ítem no ordenado
 2. Segundo ítem
 
-## Unordered Lists | Listas desordenadas | `+ \ * -`
+### Unordered Lists | Listas desordenadas | `+ \ * -`
 Las listas desordenadas, a menudo llamadas listas con viñetas, son una serie de elementos sin un orden numérico o secuencial específico. En Markdown, puedes crear listas desordenadas utilizando asteriscos *, signos más + o guiones -, seguidos de un espacio.
 
 - First item
@@ -208,7 +254,7 @@ Las listas desordenadas, a menudo llamadas listas con viñetas, son una serie de
 
 ---
 
-# Blockquote | Cita en bloque | `>`
+## Blockquote | Cita en bloque | `>`
 El blockquote es una característica en Markdown que permite citar bloques de texto. Se utiliza principalmente para indicar que un fragmento de texto proviene de otra fuente o para destacar una sección particular de texto, como una cita o un comentario importante.
 
 Sintaxis básica de Blockquote en Markdown:
@@ -243,9 +289,9 @@ Aunque técnicamente puedes usar blockquotes para cualquier propósito en tu doc
 
 ---
 
-# Code | Codigo | `` ` ` ``
+## Code | Codigo | `` ` ` ``
 En Markdown, existen diferentes maneras de representar código, ya sea código en línea o bloques de código. El código es comúnmente utilizado en documentos técnicos, tutoriales, o publicaciones relacionadas con la programación y tecnología.
-## Inline Code
+### Inline Code
 Para representar fragmentos cortos de código, variables, nombres de funciones, o cualquier otra entidad que quieras destacar dentro de una línea de texto, puedes utilizar acentos invertidos (backticks) ` `` `.
 
 `print()`
@@ -256,7 +302,7 @@ Examlpe:
 `print()`
 ```
 
-## Fenced Code Blocks | Bloques de Código
+### Fenced Code Blocks | Bloques de Código
 
 Cuando deseas representar fragmentos de código que abarcan varias líneas, usa triple acento invertido (backticks) ` ``` `:
 
@@ -292,7 +338,7 @@ HTML ` ```html `
 
 ---
 
-# Horizontal Rule | Reglas Horizontales
+## Horizontal Rule | Reglas Horizontales
 Las reglas horizontales en Markdown sirven como una forma visual de separar secciones de texto. Son especialmente útiles para dividir grandes bloques de texto o para indicar transiciones en el contenido.
 
 >---
@@ -309,7 +355,7 @@ Las reglas horizontales en Markdown sirven como una forma visual de separar secc
 
 ---
 
-# Links | Enlaces `<url>` `[](url)`
+## Links | Enlaces `<url>` `[](url)`
 Los enlaces son esenciales para conectar recursos y permitir a los lectores acceder a contenido adicional, ya sea dentro del mismo documento o en otros sitios web. En Markdown, la sintaxis para crear enlaces es sencilla y directa.
 
 Para crear un enlace en línea, se utiliza la siguiente estructura:
@@ -327,15 +373,15 @@ My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@Byt
 
 ---
 
-# Images | Imágenes `![](url)`
-## Image
+## Images | Imágenes `![](url)`
+### Image
 ![This is the ByteYourCode Logo](https://yt3.googleusercontent.com/7hyuY-x_fCjYWtgITHiuoOfereaDFDM7TrLem5AXqLOqniWsVx2ZGuuXTAwGMeZ9U5Xltsp4wPw=s176-c-k-c0x00ffffff-no-rj "ByteYourCode Logo")
 
 ```md
 ![This is the ByteYourCode Logo](https://www.youtube.com/@ByteYourCode/img "ByteYourCode Logo")
 ```
 
-## Images with link
+### Images with link
 
 [![This is the ByteYourCode Logo](https://yt3.googleusercontent.com/7hyuY-x_fCjYWtgITHiuoOfereaDFDM7TrLem5AXqLOqniWsVx2ZGuuXTAwGMeZ9U5Xltsp4wPw=s176-c-k-c0x00ffffff-no-rj "ByteYourCode Logo")](https://www.youtube.com/@ByteYourCode)
 
@@ -345,7 +391,7 @@ My favorite chanel is [ByteYourCode by abraham_esh](https://www.youtube.com/@Byt
 [![This is the ByteYourCode Logo](https://www.youtube.com/@ByteYourCode/img "ByteYourCode Logo")](https://www.youtube.com/@ByteYourCode)
 ```
 
-## Image size
+### Image size
 
 Markdown por sí mismo no tiene una sintaxis para redimensionar imágenes. Sin embargo, algunos procesadores de Markdown permiten usar HTML crudo, por lo que podrías usar etiquetas de imagen HTML para este propósito, aunque no es una solución puramente Markdown.
 
@@ -356,7 +402,7 @@ Markdown por sí mismo no tiene una sintaxis para redimensionar imágenes. Sin e
 ```
 ---
 
-# Video `<iframe>`
+## Video `<iframe>`
 En Markdown puro, no hay una sintaxis específica para insertar iframe. Sin embargo, muchos procesadores de Markdown permiten incrustar HTML directamente en el contenido, lo que significa que puedes insertar un iframe usando su etiqueta HTML estándar.
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/pBy1zgt0XPc?si=d4NdUd694V-K0EAc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -367,7 +413,7 @@ En Markdown puro, no hay una sintaxis específica para insertar iframe. Sin emba
 
 ---
 
-# Table | Tabla
+## Table | Tabla
 En Markdown, las tablas permiten organizar y presentar datos de manera estructurada. La sintaxis de las tablas en Markdown es bastante directa.
 
 | Month    | Assignee | Backup |
@@ -414,11 +460,11 @@ En Markdown, las tablas permiten organizar y presentar datos de manera estructur
 
 ---
 
-# Subscript & Superscript
+## Subscript & Superscript
 
 En el Markdown estándar, no hay una sintaxis nativa para subíndices (subscript) o superíndices (superscript). Por eso se usa HTML.
 
-## Subscript `<sub></sub>`
+### Subscript `<sub></sub>`
 
 H<sub>2</sub>O
 
@@ -426,7 +472,7 @@ H<sub>2</sub>O
 H<sub>2</sub>O
 ```
 
-## Superscript `<sup></sup>`
+### Superscript `<sup></sup>`
 
 X<sup>2</sup>
 
@@ -436,7 +482,7 @@ X<sup>2</sup>
 
 ---
 
-# Heading IDs `<h3 id="id"></h3>`
+## Heading IDs `<h3 id="id"></h3>`
 Los "Heading IDs" se refieren a los identificadores únicos asociados con los encabezados en un documento HTML. Estos IDs permiten vincular directamente a una sección específica dentro de un documento, haciendo más fácil la navegación, especialmente en documentos largos.
 
 <h3 id="custom-id">My Great Heading</h3>
@@ -450,7 +496,7 @@ http://tudominio.com/tupagina#custom-id
 
 ---
 
-# Indent (Tab) `&nbsp;`
+## Indent (Tab) `&nbsp;`
 
 &nbsp;&nbsp;&nbsp;&nbsp; This is the first sentence of my indented paragraph.
 
@@ -460,7 +506,7 @@ http://tudominio.com/tupagina#custom-id
 
 ---
 
-# Center `<center></center>`
+## Center `<center></center>`
 
 <center>This text is centered.</center>
 
@@ -471,7 +517,11 @@ http://tudominio.com/tupagina#custom-id
 
 ---
 
-# Symbols
+##  Symbols & Emojis
+
+Puedes usar emojis — ❤️🧑‍💻👌 
+
+> Para usar emojis **Windows:** `Win + .` **Mac:**`Cmd + Ctrl + Espacio`
 
 Copyright (©) — &copy; `&copy;`
 
@@ -493,7 +543,99 @@ Degree (°) — &#176; `&#176;`
 
 Pi (π) — &#960; `&#960;`
 
+---
 
+# Crea tu README.md
 
+Crear un buen archivo `README.md` es esencial cuando estás trabajando con proyectos, especialmente si estás planeando compartirlos con otros o publicarlos en plataformas como GitHub. Un buen `README.md` proporciona una introducción y guía clara para los usuarios y desarrolladores que interactúan con tu proyecto. Aquí hay algunos consejos y una estructura sugerida para hacer un buen `README.md`:
 
-<br> Documentación creada por @abraham_esh para ByteYourCode by abraham_esh
+### Consejos Generales:
+1. **Mantén el lenguaje claro y conciso.** Evita jerga innecesaria.
+2. **Usa Markdown adecuadamente** para estructurar y estilizar el contenido.
+3. **Incluye imágenes o GIFs** cuando sean útiles para entender el proyecto o para demostrar su funcionamiento.
+4. **Actualiza regularmente** el `README.md` cuando actualices el proyecto.
+
+### Estructura Sugerida:
+
+1. **Título y Descripción**
+   - Nombre del proyecto.
+   - Breve descripción (1-2 oraciones) sobre qué hace el proyecto.
+
+2. **Índice** (opcional para READMEs más largos)
+   - Una lista de secciones del `README.md` para facilitar la navegación.
+
+3. **Instalación**
+   - Cómo obtener una copia del proyecto y ejecutarlo en la máquina local.
+   - Detalla cualquier dependencia y cómo instalarlas.
+
+4. **Uso**
+   - Explica cómo usar el proyecto una vez instalado, con ejemplos si es posible.
+
+5. **Demo o Screenshots**
+   - Muestra el proyecto en acción. Esto puede ser a través de capturas de pantalla, GIFs o enlaces a demos en vivo.
+
+6. **Contribución**
+   - Si deseas que otros contribuyan a tu proyecto, proporciona detalles sobre cómo pueden hacerlo.
+   - Incluye detalles sobre el estilo de código, pruebas y cualquier otro detalle que un contribuyente deba conocer.
+
+7. **Código de Conducta y Guías de Contribución**
+   - Especialmente importante para proyectos de código abierto. Establece las expectativas para los participantes.
+
+8. **Licencia**
+   - Explica bajo qué licencia está disponible el proyecto.
+
+9. **Créditos y Agradecimientos**
+   - Reconoce a los autores y a cualquier otra persona o recurso que ayudó en el proyecto.
+
+10. **Contacto**
+   - Información de contacto para el autor o el equipo detrás del proyecto.
+
+### Ejemplo de un Inicio de `README.md`:
+```markdown
+# Proyecto Impresionante
+
+Este proyecto es una herramienta que te ayuda a hacer cosas impresionantes.
+
+## Índice
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Contribución](#contribución)
+- [Licencia](#licencia)
+
+## Instalación
+
+1. Clona este repositorio: `git clone https://github.com/A-esh/Byte-your-Markdown`
+2. Navega al directorio del proyecto: `cd Byte-your-Markdown`
+3. Instala las dependencias: `npm install`
+
+... 
+
+```
+
+Al seguir esta estructura y consejos, crearás un `README.md` claro y útil que beneficiará tanto a los usuarios como a otros desarrolladores que interactúen con tu proyecto. ¡Buena suerte!
+
+---
+
+Documentación creada por **@abraham_esh** para **ByteYourCode by abraham_esh**. 
+
+<br>
+
+ **Apache License 2.0** 
+
+[TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION](https://github.com/A-esh/Byte-your-Markdown/blob/main/LICENSE).
+
+---
+
+⭐ [Descargar resumen GRATIS Byte your Markdown](https://raw.githubusercontent.com/A-esh/Byte-your-Markdown/main/Markdown%20Summary.md)
+
+---
+
+[![GitHub](https://img.shields.io/badge/GitHub-Mi_perfil-5B47ED?style=for-the-badge&logo=github&logoColor=white&labelColor=101010)](https://github.com/A-esh)
+
+[![Youtube](https://img.shields.io/badge/Youtube_Programación-Byte_Your_Code-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=101010)](https://www.youtube.com/channel/UCSki3rWVSXcFRTKYY9F0wjQ)
+
+### Redes:
+[![Youtube](https://img.shields.io/badge/Youtube_Personal-abraham_esh-FF0000?style=for-the-badge&logo=youtube&logoColor=white&labelColor=101010)](https://www.youtube.com/channel/UCSH1XcdzydJAUu388EhaQwA) [![Twitch](https://img.shields.io/badge/Twitch-Directos-9146FF?style=for-the-badge&logo=twitch&logoColor=white&labelColor=101010)](https://twitch.com/abraham_esh) [![Linkedin](https://img.shields.io/badge/Linkedin-Perfil_Profesional-2867B2?style=for-the-badge&logo=linkedin&logoColor=white&labelColor=101010)](https://www.linkedin.com/in/abraham-esh/) [![X](https://img.shields.io/badge/Twitter-X-000000?style=for-the-badge&logo=x&logoColor=white&labelColor=101010)](https://twitter.com/abraham_esh)
+
+### Comunidad:
+[![Discord](https://img.shields.io/badge/Discord-Canal_de_la_comunidad-5865F2?style=for-the-badge&logo=discord&logoColor=white&labelColor=101010)](https://discord.gg/eh7BFDB)

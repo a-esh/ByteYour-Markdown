@@ -16,29 +16,29 @@
 
 # Headings | Titulos `#`
 
-# Titile h1
+# Title h1
 
-`# Titile h1`
+`# Title h1`
 
-## Titile h2
+## Title h2
 
-`# Titile h2`
+`# Title h2`
 
-### Titile h3
+### Title h3
 
-`# Titile h3`
+`# Title h3`
 
-#### Titile h4
+#### Title h4
 
-`# Titile h4`
+`# Title h4`
 
-##### Titile h5
+##### Title h5
 
-`# Titile h5`
+`# Title h5`
 
-###### Titile h6
+###### Title h6
 
-`# Titile h6`
+`# Title h6`
 
 ---
 
@@ -315,7 +315,7 @@ http://tudominio.com/tupagina#custom-id
 
 # Color `<font></font>`
 
-<font color="#41FAAF">This ia a text with color!</font>
+<font color="#41FAAF">This isa text with color!</font>
 
 ```html
 <font color="#41FAAF">This is a text with color!</font>
