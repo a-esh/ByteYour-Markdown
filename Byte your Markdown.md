@@ -622,7 +622,7 @@ Documentación creada por **@abraham_esh** para **ByteYourCode by abraham_esh**.
 
  **Apache License 2.0** 
 
-[TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION](https://github.com/A-esh/Byte-your-Markdown/blob/main/LICENSE).
+[TERMS AND CONDITIONS FOR USE, REPRODUCTION, AND DISTRIBUTION](https://github.com/A-esh/Byteyour-Markdown/blob/main/LICENSE).
 
 ---
 
